@@ -13,7 +13,18 @@ public static class Arrays
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
 
-        return []; // replace this return statement with your own
+        // create new array and temp val for values in array
+        double[] multiples = new double[length];
+        double tempVal = 0;
+        // loop to add number to tempVal in order to calculate the multiple and add to multiples array
+        for (int i = 0; i < length; i++)
+        {
+            tempVal += number;
+            multiples[i] = tempVal;
+        }
+
+        // return array filled with quantity of multiples requested
+        return multiples;
     }
 
     /// <summary>
@@ -23,11 +34,26 @@ public static class Arrays
     ///
     /// Because a list is dynamic, this function will modify the existing data list rather than returning a new list.
     /// </summary>
-    public static void RotateListRight(List<int> data, int amount)
+    public static List<int> RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
         // Remember: Using comments in your program, write down your process for solving this problem
         // step by step before you write the code. The plan should be clear enough that it could
         // be implemented by another person.
+
+        //create list to sort data list
+        List<int> sortedData;
+
+        sortedData = data.GetRange(data.Count - amount, amount);
+        Console.WriteLine("Part One");
+        Console.WriteLine(string.Join(", ", sortedData));
+        sortedData.AddRange(data.GetRange(0, data.Count - amount));
+        Console.WriteLine("Part Two");
+        Console.WriteLine(string.Join(", ", sortedData));
+        data = sortedData;
+        Console.WriteLine("Data End");
+        Console.WriteLine(string.Join(", ", data));
+
+        return sortedData;
     }
 }
