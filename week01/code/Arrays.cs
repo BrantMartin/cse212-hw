@@ -34,7 +34,7 @@ public static class Arrays
     ///
     /// Because a list is dynamic, this function will modify the existing data list rather than returning a new list.
     /// </summary>
-    public static List<int> RotateListRight(List<int> data, int amount)
+    public static void RotateListRight(List<int> data, int amount)
     {
         // TODO Problem 2 Start
         // Remember: Using comments in your program, write down your process for solving this problem
@@ -50,10 +50,12 @@ public static class Arrays
         sortedData.AddRange(data.GetRange(0, data.Count - amount));
         Console.WriteLine("Part Two");
         Console.WriteLine(string.Join(", ", sortedData));
-        data = sortedData;
+        data.Clear();
+        for (int i = 0; i < sortedData.Count; i++)
+        {
+            data.Add(sortedData[i]);
+        }
         Console.WriteLine("Data End");
         Console.WriteLine(string.Join(", ", data));
-
-        return sortedData;
     }
 }

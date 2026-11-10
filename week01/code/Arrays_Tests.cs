@@ -36,12 +36,6 @@ public class RotateListRightTests
     {
         List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         Arrays.RotateListRight(numbers, 1);
-        //Currently the test is comparing two list that will not change.
-        //This is a problem because it makes the test impossible to pass.
-        //You first need to set the numbers array equal to the output of RoatateListRight() Program
-        numbers = Arrays.RotateListRight(numbers, 1);
-        //This makes it so that the numbers list uses my function and becomes sorted.
-        //The end result can now be compared to the desired outcome.
         CollectionAssert.AreEqual(new List<int> { 9, 1, 2, 3, 4, 5, 6, 7, 8 }, numbers);
     }
 
@@ -50,12 +44,6 @@ public class RotateListRightTests
     {
         List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         Arrays.RotateListRight(numbers, 5);
-        //Currently the test is comparing two list that will not change.
-        //This is a problem because it makes the test impossible to pass.
-        //You first need to set the numbers array equal to the output of RoatateListRight() Program
-        numbers = Arrays.RotateListRight(numbers, 5);
-        //This makes it so that the numbers list uses my function and becomes sorted.
-        //The end result can now be compared to the desired outcome.
         CollectionAssert.AreEqual(new List<int> { 5, 6, 7, 8, 9, 1, 2, 3, 4 }, numbers);
     }
 
@@ -64,12 +52,6 @@ public class RotateListRightTests
     {
         List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         Arrays.RotateListRight(numbers, 3);
-        //Currently the test is comparing two list that will not change.
-        //This is a problem because it makes the test impossible to pass.
-        //You first need to set the numbers array equal to the output of RoatateListRight() Program
-        numbers = Arrays.RotateListRight(numbers, 3);
-        //This makes it so that the numbers list uses my function and becomes sorted.
-        //The end result can now be compared to the desired outcome.
         CollectionAssert.AreEqual(new List<int> { 7, 8, 9, 1, 2, 3, 4, 5, 6 }, numbers);
     }
 
@@ -78,12 +60,6 @@ public class RotateListRightTests
     {
         List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
         Arrays.RotateListRight(numbers, 9);
-        //Currently the test is comparing two list that will not change.
-        //This is a problem because it makes the test impossible to pass.
-        //You first need to set the numbers array equal to the output of RoatateListRight() Program
-        numbers = Arrays.RotateListRight(numbers, 9);
-        //This makes it so that the numbers list uses my function and becomes sorted.
-        //The end result can now be compared to the desired outcome.
         CollectionAssert.AreEqual(new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, numbers);
     }
 }
